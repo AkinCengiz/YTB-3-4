@@ -38,3 +38,11 @@ result = Math.pow(4,4);
 //SQRT() => Parametre olarak verilen değerin karekökünü hesaplar
 result = Math.sqrt(81);
 console.log("Result : ", result);
+
+//RANDOM() => 
+result = Math.random();
+console.log("Result : ", result);
+result = Math.floor(result * 100);
+console.log("Result : ", result);
+
+console.log(Math.floor(Math.random()*1000));
