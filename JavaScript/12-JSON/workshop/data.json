@@ -1,0 +1,14 @@
+{
+    "personalInfos" : {
+        "firstname" : "Akın",
+        "lastname" : "Cengiz",
+        "image" : "./avatar.jpg",
+        "job" : "Software Developer",
+        "address" : {
+            "city":"İstanbul",
+            "town" : "Eyüp"
+        },
+        "email" : "akincengiz@msn.com",
+        "phone" : "0534 018 33 30"
+    }
+}

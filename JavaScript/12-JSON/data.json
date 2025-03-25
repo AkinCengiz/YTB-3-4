@@ -1,0 +1,63 @@
+{
+    "products" :[
+        {
+            "name" : "Toshiba Laptop",
+            "price" : 15000,
+            "stock" : 15,
+            "category" : "Bilgisayar"
+        },
+        {
+            "name" : "Samsung S24",
+            "price" : 13000,
+            "stock" : 13,
+            "category" : "Cep Telefonu"
+        },
+        {
+            "name" : "HP Laptop",
+            "price" : 13000,
+            "stock" : 13,
+            "category" : "Bilgisayar"
+        },
+        {
+           "name" : "IPhone 15",
+            "price" : 14000,
+            "stock" : 14,
+            "category" : "Cep Telefonu"
+        }
+    ],
+    "users" : [
+        {
+            "firstname" : "Akın",
+            "lastname" : "Cengiz",
+            "email" : "akincengiz@msn.com"
+        },
+        {
+            "firstname" : "Ahmet",
+            "lastname" : "Ulusoy",
+            "email" : "ahmet@ulusoy.com"
+        },
+        {
+            "firstname" : "Berfin",
+            "lastname" : "Tatar",
+            "email" : "berfin@tatar.com"
+        },
+        {
+            "firstname" : "Berkay",
+            "lastname" : "Kaya",
+            "email" : "berkay@kaya.com"
+        }
+    ],
+    "myInfo" : {
+        "firstname" : "Akın",
+        "lastname" : "Cengiz",
+        "email" : "akincengiz@msn.com",
+        "address" : {
+            "city" : "İstanbul",
+            "town" : "Eyüp",
+            "district" : "Kemarburgaz"
+        },
+        "programLanguages" : [
+            "C#","JavaScript","React","Node","HTML","CSS"
+        ]
+    }
+}
