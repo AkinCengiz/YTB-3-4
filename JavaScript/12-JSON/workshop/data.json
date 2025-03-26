@@ -10,5 +10,45 @@
         },
         "email" : "akincengiz@msn.com",
         "phone" : "0534 018 33 30"
-    }
+    },
+    "skills" : [
+        {
+            "skill" : "CSharp",
+            "degree" : 90
+        },
+        {
+            "skill" : "MS Sql Server",
+            "degree" : 80
+        },
+        {
+            "skill" : "HTML5",
+            "degree" : 80
+        },
+        {
+            "skill" : "CSS3",
+            "degree" : 70
+        },
+        {
+            "skill" : "JavaScript",
+            "degree" : 60
+        },
+        {
+            "skill" : "React",
+            "degree" : 50
+        }
+    ],
+    "languages" : [
+        {
+            "name" : "English",
+            "degree" : "90"
+        },
+        {
+            "name" : "Spanish",
+            "degree" : "50"
+        },
+        {
+            "name" : "German",
+            "degree" : "60"
+        }
+    ]
 }
