@@ -1,6 +1,6 @@
 const numbers = [1,23,5,17,19,13,9,8,6,14,7,16,4,21];
 const cities = ["İstanbul","Ankara","Sakarya","Eskişehir","Şanlıurfa","Edirne","Çanakkale"];
-const users = [
+let users = [
     {firstname:"Akın", lastname:"Cengiz",isActive:false },
     {firstname:"Ahmet", lastname:"Ulusoy",isActive:true },
     {firstname:"Berfin", lastname:"Tatar",isActive:true },
@@ -38,7 +38,11 @@ falseUsers.map(user => {
 
 
 
+console.log(users)
 
+
+users = users.filter(user => user.firstname !== "Akın");
+console.log(users);
 
 // console.log(users);
 // console.log("True : ", trueUsers);
