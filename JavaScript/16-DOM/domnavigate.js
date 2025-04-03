@@ -13,7 +13,10 @@ console.log(classElements);
 classElements[2].innerText = "Madde 3";
 
 const listItems = document.querySelectorAll("#section>ul#section-list>li.list-item");
-console.log(listItems);
+console.log("ListItem QuerySelectorAll",listItems);
+const listItem = document.querySelector("#section>ul#section-list>li.list-item");
+listItem.innerText = "QuerySelector"
+console.log("ListItem QuerySelector",listItem);
 
 const createdElement = document.getElementById("created");
 const createH2 = document.createElement("h2");
@@ -22,6 +25,12 @@ createdElement.appendChild(createH2);
 
 const pElement = document.createElement("p");
 pElement.innerHTML = "<strong>Burası paragraf <br/> Burası yeni satır</strong>";
+pElement.style.backgroundColor = "green";
+pElement.style.color = "white";
+pElement.style.padding = "10px";
+pElement.style.border = "3px solid black"
+pElement.setAttribute("name","paragraf1");
+
 createdElement.appendChild(pElement);
 const h1Element = document.createElement("h1");
 h1Element.innerText = "Ana Başlık";
@@ -46,3 +55,4 @@ bodyElement.prepend(btn);
 btn.addEventListener("click",() => {
     aboutElement.classList.toggle("toogle");
 })
+
