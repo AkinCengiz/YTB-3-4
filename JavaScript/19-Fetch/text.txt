@@ -1,0 +1,15 @@
+Yetenek Başakşehir Living Lab 103-104
+1-Html
+2-Css
+3-JavaScript
+4-React
+5-CSharp
+6-MsSql Server
+
+
+Teknolojiler
+1-Katmanlı Mimari
+2-EntityFramework
+3-Auto Mapper
+4-Dependency Injection
+5-Fluent Validation

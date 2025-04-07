@@ -1,0 +1,15 @@
+{
+    "user":{
+        "firstname" : "Akın",
+        "lastname" : "Cengiz",
+        "email" : "akincengiz@msn.com",
+        "address":{
+            "city" : "İstanbul",
+            "town" : "Eyüp",
+            "district" : "Kemerburgaz"
+        },
+        "skilss" : ["Html","Css","JavaScript","React","CSharp","MsSql Server","MongoDb","Java"]
+    },
+    "cities" : ["İstanbul","İzmir","Ankara","Edirne","Erzurum","Nevşehir","Trabzon","Artvin"],
+    "numbers" : [1,2,3,4,5,6,7,8,9]
+}
