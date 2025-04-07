@@ -13,6 +13,13 @@ function getJsonData(fileUrl){
 
 }
 
+function getApiData(url){
+    fetch(url)
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+}
+
 getTextData("text.txt");
 getTextData("text2.txt");
 
