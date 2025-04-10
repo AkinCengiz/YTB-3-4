@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Header'
 import PhotoGrid from './PhotoGrid'
 import ImageOfMe from './ImageOfMe'
 import About from './About'
 import Contact from './Contact'
+import {About as AboutData} from "../data/";
 
 function PageContent() {
+  const [about,setAbout] = useState(AboutData)
+
   return (
     <>
         <div className="w3-main" style={{ marginLeft: 300 }}>
@@ -13,8 +16,8 @@ function PageContent() {
           <Header />
           <PhotoGrid />
           {/* Images of Me */}
-          <ImageOfMe />
-          <About />
+          <ImageOfMe images={about.images} />
+          <About info={about.info} skills={about.skills} />
           {/* Contact Section */}
           <Contact />
           {/* Footer */}

@@ -1,13 +1,17 @@
 import React from 'react'
 import GridCard from './GridCard'
 
-function SecondPhotoGrid() {
+function SecondPhotoGrid({portfolios}) {
   return (
     <>
     <div className="w3-row-padding">
-            <GridCard />
-            <GridCard />
-            <GridCard />           
+      {
+        portfolios.map((item,index) => {
+          if(index>2){
+            return <GridCard portfoy={item} key={index} />
+          }
+        })
+      }           
           </div>
     </>
   )

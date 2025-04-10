@@ -1,13 +1,17 @@
 import React from 'react'
 import ImageBox from './ImageBox'
 
-function ImageOfMe() {
+function ImageOfMe({images}) {
   return (
     <>
     <div className="w3-row-padding w3-padding-16" id="about">
-            <ImageBox/>
-            <ImageBox/>
-          </div>
+      {
+        images.map((image,index)=> (
+          <ImageBox image={image} key={index}/>
+
+        ))
+      }
+      </div>
     </>
   )
 }

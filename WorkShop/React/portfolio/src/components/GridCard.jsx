@@ -1,23 +1,21 @@
 import React from 'react'
 
-function GridCard() {
+function GridCard({ portfoy }) {
   return (
     <>
     <div className="w3-third w3-container w3-margin-bottom">
               <img
-                src="/assets/images/mountains.jpg"
-                alt="Norway"
+                src={portfoy?.image}
+                alt={portfoy?.title}
                 style={{ width: "100%" }}
                 className="w3-hover-opacity"
               />
               <div className="w3-container w3-white">
                 <p>
-                  <b>Lorem Ipsum</b>
+                  <b>{portfoy?.title}</b>
                 </p>
                 <p>
-                  Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-                  condimentum, porta lectus vitae, ultricies congue gravida diam
-                  non fringilla.
+                  {portfoy?.description}
                 </p>
               </div>
             </div>

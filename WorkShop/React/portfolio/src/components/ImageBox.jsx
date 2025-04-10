@@ -1,10 +1,10 @@
 import React from "react";
 
-function ImageBox() {
+function ImageBox({image}) {
   return (
     <>
       <div className="w3-col m6">
-        <img src="/assets/images/me2.jpg" alt="Me" style={{ width: "100%" }} />
+        <img src={image} alt="Me" style={{ width: "100%" }} />
       </div>
     </>
   );

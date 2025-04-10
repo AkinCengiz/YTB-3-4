@@ -1,8 +1,10 @@
 import React from 'react'
 
-export default function Footer() {
+
+export default function Footer({result}) {
   return (
     <>
+    <h1>Counter : {result}</h1>
         <ul>
             <li>Madde 1</li>
             <li>Madde 2</li>

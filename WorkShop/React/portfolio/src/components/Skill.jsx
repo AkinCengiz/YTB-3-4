@@ -1,15 +1,15 @@
 import React from "react";
 
-function Skill() {
+function Skill({skill}) {
   return (
     <>
-      <p>Photography</p>
+      <p>{skill.name}</p>
       <div className="w3-grey">
         <div
           className="w3-container w3-dark-grey w3-padding w3-center"
-          style={{ width: "95%" }}
+          style={{ width: `${skill?.rate}%` }}
         >
-          95%
+          {skill?.rate}%
         </div>
       </div>
     </>

@@ -1,9 +1,14 @@
 import "./Header.css";
 
-function Header(){
+
+function Header({decrement,increment}){
+    
+
     return (
+    
         <>
-            <h3>Bu Header Componenti</h3>
+            <button id="counter-increment" onClick={decrement}>Counter Azalt</button>
+            <button id="counter-increment" onClick={increment}>Counter Arttır</button>
             <p>Burada ilk komponentimizi oluşturmuş olduk.</p>
         </>
     )
