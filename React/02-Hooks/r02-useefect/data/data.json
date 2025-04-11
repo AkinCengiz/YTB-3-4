@@ -1,0 +1,27 @@
+{
+    "products":[
+        { "id" : 1,"name":"Laptop PC","price":17000,"stock":11},
+        { "id" : 2,"name":"Desktop PC","price":13000,"stock":9},
+        { "id" : 3,"name":"Android Phone","price":15000,"stock":21},
+        { "id" : 4,"name":"IOS Phone","price":16000,"stock":19},
+        { "id" : 5,"name":"UHD TV","price":11000,"stock":7}
+    ],
+    "users" : [
+        { "firstname":"user1", "lastname":"lastname1"},
+        { "firstname":"user2", "lastname":"lastname2"},
+        { "firstname":"user3", "lastname":"lastname3"},
+        { "firstname":"user4", "lastname":"lastname4"},
+        { "firstname":"user5", "lastname":"lastname5"}
+    ],
+    "myInfo" : {
+        "firstname":"Akın",
+        "lastname":"Cengiz",
+        "email":"akincengiz@msn.com",
+        "address" : {
+            "city":"İstanbul",
+            "town":"Eyüp",
+            "distinct" : "Kemerburgaz"
+        }
+    }
+    
+}
