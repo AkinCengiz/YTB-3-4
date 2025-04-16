@@ -7,7 +7,7 @@
 /* FORM CSS - START */
 #task-form-container{
     width: 30%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding: 10px;
 }
 
@@ -60,3 +60,63 @@
 }
 
 /* FORM CSS - END */
+
+/* TASK LİST - START */
+#task-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-count: 3;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+/* TASK CARD - START */
+.task-card-container{
+    width: 33%;
+    padding: 5px;
+    /* border: 1px solid red; */
+}
+.task-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+.card-group{
+    width: 100%;
+    padding: 10px;
+    /* text-align: center; */
+    border-bottom: 1px solid silver;
+}
+.card-title{
+    margin: 5px 0;
+}
+.card-text{
+    margin: 5px 0;
+}
+.button-group{
+    text-align: center;
+    width: 100%;
+}
+.card-button{
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 5px;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+.update-button{
+    background-color: green;
+    color: white;
+}
+.delete-button{
+    background-color: red;
+    color: white;
+}

@@ -1,13 +1,27 @@
+import { useState } from "react";
 import "./App.css";
 import TaskForm from "./components/TaskForm";
+import TaskList from "./components/TaskList";
 
 function App() {
+  const [tasks,setTasks] = useState([]);
+
+  const createTask = (title,description,important) => {
+    setTasks([...tasks,{
+      id:Math.ceil(Math.random()*9999999),
+      title,
+      description,
+      important
+    }])
+    console.log(tasks);
+  }
+
   return (
   <div id="app">
     <div id="task-form-container">
-      <TaskForm />
+      <TaskForm createTask={createTask}/>
     </div>
-    <div style={{width:"50%", height:"30vh",border:"1px solid black"}}></div>
+    <TaskList tasks={tasks}/>
   </div>
   )
 }
