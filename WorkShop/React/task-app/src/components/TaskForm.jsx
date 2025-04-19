@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-function TaskForm({createTask}) {
-    const [title,setTitle] = useState("");
-    const [description,setDescription] = useState("");
-    const [important, setImportant] = useState(false);
+function TaskForm({createTask,task,updateTask}) {
+    const [title,setTitle] = useState(task ? task.title : "");
+    const [description,setDescription] = useState(task ? task.description : "");
+    const [important, setImportant] = useState(task ? task.important : false);
 
     const handleTitleChange = (e) => {
         setTitle(e.target.value);
@@ -20,8 +20,12 @@ function TaskForm({createTask}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(task){
+            updateTask(task.id,title,description,important)
+        }else{
+            createTask(title,description,important);
+        }
         //console.log(title,description, e.target);
-        createTask(title,description,important);
         setDescription("");
         setImportant(false);
         setTitle("");
@@ -30,7 +34,7 @@ function TaskForm({createTask}) {
 
   return (
     <form id='task-form' onSubmit={handleSubmit}>
-        <h2 id='form-title'>Create Task</h2>
+        <h2 id='form-title'>{task ? "Update Task" : "Create Task"}</h2>
         <div className="form-group">
             <label htmlFor="title" className="form-label">Title</label>
             <input type="text" value={title} className="form-control" id="title" onChange={handleTitleChange} />
@@ -44,7 +48,7 @@ function TaskForm({createTask}) {
                 <input type="checkbox" name='important' id='important' className='form-check' checked={important} onChange={handleImportantChecked} />
             </label>
         </div>
-        <button className='form-button create-button'>Create</button>
+        <button className={task ? "form-button update-button" : "form-button create-button"}>{task ? "Update" :"Create" }</button>
     </form>
   )
 }
