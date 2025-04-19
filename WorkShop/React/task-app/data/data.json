@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "id": "f859",
+      "title": "1. Task",
+      "description": "1. Description",
+      "important": true
+    },
+    {
+      "id": "ed18",
+      "title": "2. Task",
+      "description": "2. Description",
+      "important": false
+    },
+    {
+      "id": "2143",
+      "title": "Async",
+      "description": "Await",
+      "important": true
+    },
+    {
+      "title": "Axios",
+      "description": "Axios ile crud işlemleri.",
+      "important": true,
+      "id": "c193"
+    },
+    {
+      "title": "Response Data Güncellendi.",
+      "description": "Response data eklendi",
+      "important": true,
+      "id": "5ac6"
+    },
+    {
+      "title": "Son Görev",
+      "description": "Son açıklama",
+      "important": false,
+      "id": "5e5a"
+    }
+  ]
+}

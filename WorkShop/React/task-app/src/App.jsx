@@ -1,34 +1,58 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios"
 import "./App.css";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 
+const apiUrl = "http://localhost:3000/tasks";
 function App() {
   const [tasks,setTasks] = useState([]);
+//async
+  const createTask = async (title,description,important) => {
+    const response = await axios.post(apiUrl,{title,description,important });
+    setTasks([...tasks,response.data]);
+    // setTasks([...tasks,{
+    //   id:Math.ceil(Math.random() * 9999999),
+    //   title,
+    //   description,
+    //   important
+    // }])
+    //console.log(response.data);
+  }
 
-  const createTask = (title,description,important) => {
-    setTasks([...tasks,{
-      id:Math.ceil(Math.random()*9999999),
+  const deleteTask = async(id) => {
+    // const deleteAfterTasks = tasks.filter(task => task.id !== id);
+    // setTasks(deleteAfterTasks);
+    await axios.delete(apiUrl+`/${id}`);
+    getTasks();
+  }
+
+  const getTasks = async() => {
+    const response = await axios.get(apiUrl);
+    // console.log(response.data);
+    setTasks(response.data)
+  }
+
+  
+  useEffect(() => {
+    getTasks();
+  },[]);
+ 
+
+  const updateTask = async(id,title,description,important) => {
+    await axios.put(apiUrl+`/${id}`,{
       title,
       description,
       important
-    }])
-    console.log(tasks);
-  }
-
-  const deleteTask = (id) => {
-    const deleteAfterTasks = tasks.filter(task => task.id !== id);
-    setTasks(deleteAfterTasks);
-  }
-
-  const updateTask = (id,title,description,important) => {
-    const updateAfterTasks = tasks.map(task => {
-      if(task.id === id){
-        return {id,title,description,important}
-      }
-      return task;
-    })
-    setTasks(updateAfterTasks);
+    });
+    getTasks();
+    // const updateAfterTasks = tasks.map(task => {
+    //   if(task.id === id){
+    //     return {id,title,description,important}
+    //   }
+    //   return task;
+    // })
+    // setTasks(updateAfterTasks);
   }
 
   return (

@@ -1,0 +1,27 @@
+{
+    "products" : [
+        {"id":1, "name":"Laptop","price":19000,"stock":11},
+        {"id":2, "name":"Desktop","price":13000,"stock":7},
+        {"id":3, "name":"Samsung Telefon","price":16000,"stock":21},
+        {"id":4, "name":"IPhone Telefon","price":17500,"stock":13},
+        {"id":5, "name":"LG Televizyon","price":11000,"stock":5}
+    ],
+    "users" : [
+        {"id":1,"firstname":"Firstname1","lastname":"Lastname1"},
+        {"id":2,"firstname":"Firstname2","lastname":"Lastname2"},
+        {"id":3,"firstname":"Firstname3","lastname":"Lastname3"},
+        {"id":4,"firstname":"Firstname4","lastname":"Lastname4"},
+        {"id":5,"firstname":"Firstname5","lastname":"Lastname5"},
+        {"id":6,"firstname":"Firstname6","lastname":"Lastname6"}
+    ],
+    "personalinfos":{
+        "firstname":"Akın",
+        "lastname":"Cengiz",
+        "email":"akincengiz@msn.com"
+    },
+    "books":[
+        {"id":1,"name":"Sefiller","author":"Victor Hugo"},
+        {"id":2,"name":"Tutunamayanlar","author":"Oğuz Atay"},
+        {"id":3,"name":"Nutuk","author":"Mustafa Kemal ATATÜRK"}
+    ]
+}
