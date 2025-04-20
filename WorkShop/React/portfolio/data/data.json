@@ -1,0 +1,31 @@
+{
+    "myinfo" : {
+        "firstname" : "Akın",
+        "lastname" : "Cengiz",
+        "image" : "./assets/images/avatar_g2.jpg",
+        "job" : "Bilgisayar Mühendisi"
+    },
+    "socialaccounts" : [
+        {"weburl": "https://www.facebook.com","username":"akincengiz","icon":"fa fa-facebook-official"},
+        {"weburl": "https://www.instagram.com","username":"akincengiz","icon":"fa fa-instagram"},
+        {"weburl": "https://www.snapchat.com","username":"akincengiz","icon":"fa fa-snapchat"},
+        {"weburl": "https://www.pinterest.com","username":"akincengiz","icon":"fa fa-pinterest-p"},
+        {"weburl": "https://www.twitter.com","username":"akincengiz","icon":"fa fa-twitter"},
+        {"weburl": "https://tr.linkedin.com/","username":"akincengiz","icon":"fa fa-linkedin"}
+    ],
+    "project" : [
+        {"id" : 1, "image":"./assets/images/lights.jpg","title":"To Do App","description" : "JavaScript ile to do uygulaması"},
+        {"id" : 2, "image":"./assets/images/mountains.jpg","title":"Task App","description" : "React ile to do uygulaması"},
+        {"id" : 3, "image":"./assets/images/nature.jpg","title":"Portfolio App","description" : "Html ve Css ile tepmlate tasarımı"},
+        {"id" : 4, "image":"./assets/images/p1.jpg","title":"Portfolio App","description" : "React ile portfolio uygulaması"},
+        {"id" : 5, "image":"./assets/images/p2.jpg","title":"Resume App","description" : ".Net ile WebApi uygulaması"},
+        {"id" : 6, "image":"./assets/images/p3.jpg","title":"Bootstrap App","description" : "Bootstrap ile to do uygulaması"}
+    ],
+    "skills" : [
+        {"id":1, "name" : "Html", "rate" : 100},
+        {"id":2, "name" : "Css", "rate" : 90},
+        {"id":3, "name" : "JavaScript", "rate" : 85},
+        {"id":4, "name" : "React", "rate" : 80},
+        {"id":5, "name" : "CSharp", "rate" : 95}
+    ]
+}
