@@ -35,6 +35,12 @@
       "description": "Son açıklama",
       "important": false,
       "id": "5e5a"
+    },
+    {
+      "id": "82f7",
+      "title": "Context API",
+      "description": "Context API yapısı projeye eklendi",
+      "important": true
     }
   ]
 }

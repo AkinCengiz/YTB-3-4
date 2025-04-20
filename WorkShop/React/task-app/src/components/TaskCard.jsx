@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import TaskForm from './TaskForm';
+import { useContext } from 'react';
+import { TaskContext } from '../contexts/TaskContext';
 
-function TaskCard({task,deleteTask,updateTask}) {
+function TaskCard({task}) {
     const [isUpdate,setIsUpdate] = useState(false);
+    const {deleteTask, updateTask} = useContext(TaskContext)
 
     const handleDeleteTask = () => {
         deleteTask(task.id);
