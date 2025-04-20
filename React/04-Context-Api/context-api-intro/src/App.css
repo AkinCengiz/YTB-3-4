@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#book-list{
+    background-color: #ddd;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.book-card{
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-color: white;
+}
+.book-image{
+    width: 100%;
+    margin-bottom: 3px;
+}
+.card-title, .card-text, .book-author{
+    padding: 10px 0;
+}

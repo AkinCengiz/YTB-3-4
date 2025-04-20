@@ -1,20 +1,19 @@
-import { useState } from 'react'
 import './App.css'
 import Content from './components/Content'
-import Deneme from './components/Deneme'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import BookList from './components/BookList'
 
 function App() {
-  const [deneme,setDeneme] = useState("Deneme");
+  //const [deneme,setDeneme] = useState("Deneme");
 
   return (
     <>
       <h1>Context API</h1>
       <Header />
       <Content  />
+      <BookList />
       <Footer/>
-      <Deneme deneme={deneme} setDeneme={setDeneme} />
     </>
   )
 }
