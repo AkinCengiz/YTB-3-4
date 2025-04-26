@@ -1,0 +1,36 @@
+.button{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1rem 3rem;
+    background-color: #FF8C00;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.button:hover, .button:active{
+    border: 2px solid #FF8C00;
+    background-color: #fff;
+    color: #FF8C00;
+}
+.icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+.badge{
+    padding: 0 0.75rem;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #FF8C00;
+    margin-left: 0.5rem;
+}
+
+.button:hover .badge, .button:active .badge{
+    background-color: #FF8C00;
+    color: #fff;
+}

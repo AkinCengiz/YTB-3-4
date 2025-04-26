@@ -1,8 +1,13 @@
 import React from 'react'
+import "./Header.css"
+import HeaderCartButton from './HeaderCartButton'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <header className='header'>
+        <h1>YTB Store</h1>
+        <HeaderCartButton />
+    </header>
   )
 }
 
