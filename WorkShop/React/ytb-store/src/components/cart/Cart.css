@@ -1,0 +1,66 @@
+.offcanvas{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1rem;
+    z-index: 100;
+}
+.content{
+    width: 300px;
+}
+.cart-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid silver;
+}
+
+.cart-header h3{
+    margin: 0;
+}
+.cart-close{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.cart-actions{
+    width: 100%;
+}
+.cart-actions button{
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+.pay-button{
+    background-color: #00f;
+    color: #fff;
+}
+.pay-button:hover{
+    background-color: #fff;
+    color: #00f;
+    border: 1px solid #00f;
+}
+
+.clear-button{
+    background-color: #f00;
+    color: #fff;
+}
+.clear-button:hover{
+    background-color: #fff;
+    color: #f00;
+    border: 1px solid #f00;
+}
