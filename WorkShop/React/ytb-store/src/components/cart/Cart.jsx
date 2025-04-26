@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Cart.css";
+import CartItems from './CartItems';
 
 const Cart = () => {
   return (
@@ -9,7 +10,7 @@ const Cart = () => {
                 <h3>Cart's</h3>
                 <a href="/" className='cart-close'>X</a>
             </div>
-            CartItems 
+            <CartItems />
             <div className="cart-total">
                 <span>Total :</span>
                 <span>1500 ₺</span>
