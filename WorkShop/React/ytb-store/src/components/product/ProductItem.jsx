@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./ProductItem.css"
+import { CartContext } from '../../contexts/CartProvider'
+import Rating from './Rating'
 
-const ProductItem = () => {
+const ProductItem = ({product}) => {
+  const {addToCart} = useContext(CartContext)
   return (
     <div className='card'>
-        <img src="/assets/images/products/laptop.png" alt="Laptop" />
-        <h3 className='product-title'>Laptop</h3>
-        <p className='product-description'>Laptop detay bilgileri</p>
+        <img src={product.image} alt={product.name} />
+        <h3 className='product-title'>{product.name}</h3>
+        <p className='product-description'>{product.description}</p>
         <div className="product-info">
-            <p>*****</p>
-            <span className='product-price'>1500 ₺</span>
+            <Rating rating={product.rating}/>
+            <span className='product-price'>{product.price} ₺</span>
         </div>
-        <button className='add-to-cart'>Add To Cart</button>
+        <button className='add-to-cart' onClick={() => addToCart(product)}>Add To Cart</button>
     </div>
   )
 }

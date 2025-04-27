@@ -2,7 +2,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #008080;
+    color: #FF8C00;
     width: 100%;
     display: flex;
     justify-content: space-between;

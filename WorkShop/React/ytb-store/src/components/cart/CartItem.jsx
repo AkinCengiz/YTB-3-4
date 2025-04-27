@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./CartItem.css";
+import { CartContext } from '../../contexts/CartProvider';
 
-const CartItem = () => {
+const CartItem = ({product}) => {
+    const {removeProductFromCart} = useContext(CartContext)
+
+    const removeItemHandle = (e) => {
+        e.preventDefault();
+        removeProductFromCart(product);
+    }
   return (
     <div className='cart-item'>
         <div className="cart-item-image">
-            <img src="/assets/images/products/laptop.png" alt="Laptop" />
+            <img src={product.image} alt="Laptop" />
         </div>
         <div className="cart-item-info">
             <div className="cart-item-texts">
-                <strong>Laptop</strong>
+                <strong>{product.name}</strong>
                 <div className="cart-item-total">
-                    <span>₺ 1500 X </span>
-                    <span>1</span>
+                    <span>₺ {product.price} X </span>
+                    <span>{product.amount}</span>
                 </div>
             </div>
-            <a href="/" className='cart-item-remove'>x</a>
+            <a href="/" className='cart-item-remove' onClick={removeItemHandle}>x</a>
         </div>
     </div>
   )
