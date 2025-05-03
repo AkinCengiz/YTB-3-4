@@ -1,0 +1,43 @@
+.calculate-wrapper{
+    width: 100%;
+    background-color: red;
+    padding: 2rem;
+}
+.calculate-form{
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid silver;
+    background-color: grey;
+}
+.form-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form-label{
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+.form-control{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.button-group{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-btn{
+    padding: 1rem;
+    border: none;
+    width: 20%;
+    background-color: black;
+    color: white;
+}
