@@ -1,6 +1,6 @@
 import './App.css'
 import Calculate from './components/Calculate'
-import CalculateReducer from './components/CalculateReducer'
+import CalculateReducer from './components/calculate/CalculateReducer'
 import Counter from './components/Counter'
 import CounterReducer from './components/CounterReducer'
 
