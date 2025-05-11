@@ -25,6 +25,25 @@ const CategoryList = () => {
         getCategories();
     },[dataSource])
 
+    const deleteCategory = async (categoryid) => {
+        try {
+            const response = await fetch("http://localhost:5000/api/categories",{
+                method : "DELETE",
+                headers : {
+                    "content-type" : "application/json"
+                },
+                body : JSON.stringify({_id:categoryid})
+            });
+            if(response.ok){
+                navigate("/admin/categories");
+            }else{
+                console.log("Silme işlemi sırasında hata oluştu...");
+            }
+        } catch (error) {
+            console.log("Sunucu hatası : ",error);
+        }
+    }
+
 
 
     const columns = [
@@ -50,7 +69,7 @@ const CategoryList = () => {
             render : (_,record) => (
                 <Space size="middle">
                     <Button onClick={() => {navigate(`/admin/categories/update/${record._id}`)}} color='success'>Güncelle</Button>
-                    <Button onClick={() => {}} color='danger'>Sil</Button>
+                    <Button onClick={() => deleteCategory(record._id)} color='danger'>Sil</Button>
                 </Space>
             )
         }

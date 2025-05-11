@@ -10,16 +10,25 @@ import {
   MenuUnfoldOutlined,
   PieChartOutlined,
   UserOutlined,
-  UserAddOutlined
+  UserAddOutlined,
+  BookOutlined
 } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 const { Header, Footer, Sider, Content } = Layout;
 
-const items = [
-  { key: '1', icon: <PieChartOutlined />, label: 'Dashboard' },
+
+
+
+const AdminLayout = ({children}) => {
+
+    const navigate = useNavigate();
+    const items = [
+  { key: '1', icon: <PieChartOutlined />, label: 'Dashboard', onClick : () => navigate("/admin") },
   {
     key: '2',
     label: 'Ürünler',
+    path : "/",
     icon: <LaptopOutlined />,
     children: [
       { key: '2-1', label: 'Ürün Listele' },
@@ -30,9 +39,10 @@ const items = [
     key: '3',
     label: 'Kategoriler',
     icon: <AppstoreOutlined />,
+    path : "/",
     children: [
-      { key: '3-1', label: 'Kategori Listele' },
-      { key: '3-2', label: "Kategori Ekle" }
+      { key: '3-1', label: 'Kategori Listele', path:"/admin/categories",onClick : () => {navigate("/admin/categories")} },
+      { key: '3-2', label: "Kategori Ekle",path:"/admin/categories/create", onClick : () => {navigate("/admin/categories/create")} }
     ],
   },
   {
@@ -46,18 +56,14 @@ const items = [
   },
   {
     key: '5',
-    label: 'Kullanıcılar',
-    icon: <UserOutlined />,
+    label: 'Dersler',
+    icon: <BookOutlined />,
     children: [
-      { key: '5-1', label: 'Kullanıcı Listele', icon:<UserAddOutlined /> },
-      { key: '5-2', label: "Kullanıcı Ekle" }
+      { key: '5-1', label: 'Dersleri Listele' },
+      { key: '5-2', label: "Ders Ekle" }
     ],
   }
 ];
-
-
-const AdminLayout = ({children}) => {
-
 
   return (
     <div className='admin-layout'>
