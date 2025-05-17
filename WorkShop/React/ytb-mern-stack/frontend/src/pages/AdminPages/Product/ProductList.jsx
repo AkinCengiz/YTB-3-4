@@ -4,22 +4,47 @@ import React, { useEffect, useState } from 'react'
 const ProductList = () => {
     const [dataSource, setDataSource] = useState([]);
     
-    const getProducts = async() => {
+    const getData = async() => {
         try {
-            const response = await fetch("http://localhost:5000/api/products");
-            if(response.ok){
-                const data = await response.json();
-                setDataSource(data);
-            }else{
-                console.log("Ürünler getirilemedi...");
+            const [categoryResponse, productResponse] = await Promise.all(
+                [
+                    fetch("http://localhost:5000/api/categories"),
+                    fetch("http://localhost:5000/api/products")
+                ]
+            );
+            if(!categoryResponse.ok || !productResponse.ok){
+                console.log("Veri getirilirken hata meydana geldi...");
             }
+            const [categoryData,productData] = await Promise.all([
+                categoryResponse.json(),
+                productResponse.json()
+            ]);
+
+            const productDataWithCategory = productData.map((product) => {
+                const categoryId = product.category;
+                const category = categoryData.find((category => category._id === categoryId));
+
+                return {
+                    ...product,
+                    categoryName : category ? category.name : ""
+                };
+            });
+            setDataSource(productDataWithCategory);
+            
+            // const response = await fetch("http://localhost:5000/api/products");
+            // if(response.ok){
+            //     const data = await response.json();
+            //     setDataSource(data);
+            // }else{
+            //     console.log("Ürünler getirilemedi...");
+            // }
         } catch (error) {
             console.log(error)
         }
     }
 
     useEffect(() => {
-        getProducts();
+        getData();
     },[]);
 
     const columns = [
@@ -32,8 +57,8 @@ const ProductList = () => {
         },
         {
             title : "Ürün Kategorisi",
-            dataIndex : "category",
-            key : "category.name"
+            dataIndex : "categoryName",
+            key : "categoryName"
         },
         {
             title : "Marka",

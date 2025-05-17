@@ -58,7 +58,7 @@ const CreateProduct = () => {
     <div>
         <h2 style={{paddingBottom:"10px"}}>Ürün Ekle</h2>
         <Form form={form} layout='vertical' initialValues={initialValues} onFinish={addProduct}>
-            <Form.Item label="Ürün Adı" name="name">
+            <Form.Item label="Ürün Adı" name="name" rules={[{required : true, message:"Ürün adı boş geçilemez..."}]}>
                 <Input placeholder='Ürün adı giriniz...' />
             </Form.Item>
             <Form.Item label="Ürün Görselleri" name="images">
@@ -76,10 +76,10 @@ const CreateProduct = () => {
             <Form.Item label="Stok Miktarı" name="stock">
                 <Input type='number' />
             </Form.Item>
-            <Form.Item label="Alış Fiyatı" name="purchasePrice">
+            <Form.Item label="Alış Fiyatı" name="purchasePrice" rules={[{required : true, message:"Alış fiyatı boş geçilemez..."}]}>
                 <Input type='number'/>
             </Form.Item>
-            <Form.Item label="Marka" name="brand">
+            <Form.Item label="Marka" name="brand" rules={[{required : true, message:"Marka alanı boş geçilemez..."}]}>
                 <Input placeholder='Marka giriniz...' />
             </Form.Item>
             <Form.Item label="Kategori" name="category">

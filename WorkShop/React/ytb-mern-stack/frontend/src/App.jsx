@@ -8,6 +8,8 @@ import UpdateCategory from "./pages/AdminPages/Category/UpdateCategory";
 import ProductList from "./pages/AdminPages/Product/ProductList";
 import CreateProduct from "./pages/AdminPages/Product/CreateProduct";
 import UpdateProduct from "./pages/AdminPages/Product/UpdateProduct";
+import ProductsPage from "./pages/ProductsPage";
+import CategoriesPage from "./pages/CategoriesPage";
 
 function App() {
 
@@ -15,7 +17,9 @@ function App() {
   return (
     <div className='app'>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route index element={<HomePage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/admin/">
           <Route index element={<Dashboard />} />
           <Route path="categories" element={<CategoryList />} />
