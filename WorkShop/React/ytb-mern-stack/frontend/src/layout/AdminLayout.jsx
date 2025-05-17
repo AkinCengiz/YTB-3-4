@@ -31,8 +31,8 @@ const AdminLayout = ({children}) => {
     path : "/",
     icon: <LaptopOutlined />,
     children: [
-      { key: '2-1', label: 'Ürün Listele' },
-      { key: '2-2', label: 'Ürün Ekle' }
+      { key: '2-1', label: 'Ürün Listele', onClick : () => {navigate("/admin/products")} },
+      { key: '2-2', label: 'Ürün Ekle', onClick : () => {navigate("/admin/products/create")} }
     ],
   },
   {
