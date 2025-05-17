@@ -31,6 +31,11 @@ const ProductList = () => {
             render : (img,record) => (<img src={`${record.images[0]}`} alt={`${record.name}`} style={{width : "50%"}} />)
         },
         {
+            title : "Ürün Kategorisi",
+            dataIndex : "category",
+            key : "category.name"
+        },
+        {
             title : "Marka",
             dataIndex : "brand",
             key : "brand"
@@ -91,7 +96,7 @@ const ProductList = () => {
   return (
     <div>
         <h2>Ürünler</h2>
-        <Table columns={columns} dataSource={dataSource} >
+        <Table columns={columns} dataSource={dataSource} rowKey={(record) => record._id} >
 
         </Table>
     </div>
